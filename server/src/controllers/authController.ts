@@ -170,7 +170,7 @@ export const googleAuthCallback = async (req: Request, res: Response) => {
     httpOnly: true,
     sameSite: "lax",
   })
-  res.redirect("http://localhost:3000")
+  res.redirect(process.env.CLIENT_URL!)
 }
 export const verifyUser = async (req: Request, res: Response) => {
   const verificationCode = req.params.code as any

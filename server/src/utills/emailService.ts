@@ -21,7 +21,7 @@ export const sendMail = async (email: string, code: string) => {
       from: `Chat-app ${process.env.EMAIL}`,
       to: email,
       subject: "Verification Email",
-      html: `<p>Please click on the link <a href=$http://localhost:3000/verify/${code}>Click to verify</a>`,
+      html: `<p>Please click on the link <a href=$${process.env.CLIENT_URL}/verify/${code}>Click to verify</a>`,
     },
     async (error:any,emailsuccess:any)=>{
         if(error){
