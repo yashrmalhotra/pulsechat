@@ -115,7 +115,7 @@ export const signUp = async (req: Request, res: Response) => {
 }
 export const signIn = async (req: Request, res: Response) => {
   const { identifier, password } = req.body
-
+  console.log("hi i am from vercel")
   try {
     const user = await User.findOne({
       $or: [{ email: identifier }, { username: identifier }],
@@ -143,7 +143,8 @@ export const signIn = async (req: Request, res: Response) => {
         res.cookie("token", token, {
           maxAge: 1000 * 3600 * 24,
           httpOnly: true,
-          sameSite: "lax",
+          sameSite: "none",
+          secure:true
         })
         res.json({
           name: user.name,
@@ -168,7 +169,8 @@ export const googleAuthCallback = async (req: Request, res: Response) => {
   res.cookie("token", token, {
     maxAge: 1000 * 3600 * 24,
     httpOnly: true,
-    sameSite: "lax",
+    sameSite: "none",
+    secure:true
   })
   res.redirect(process.env.CLIENT_URL!)
 }
@@ -189,7 +191,6 @@ export const getUserData = async (req: Request, res: Response) => {
   const token = req.cookies.token
   if (token) {
     const payload = getPayload(token)
-
     try {
       const cachedUser = await client.hgetall(`user:${payload.identifier}`)
       const file = await getUserAvatar(payload.id)

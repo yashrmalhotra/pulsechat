@@ -23,7 +23,9 @@ const Chatlist = () => {
     ;(async () => {
       try {
         setIsLoading(true)
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/chat?email=${user?.email}`)
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/chat?email=${user?.email}`,{
+          withCredentials:true
+        })
         setChatList(res.data.chats)
         setTotalUnreadCount(res.data.totalUnreadCount)
      
