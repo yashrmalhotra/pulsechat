@@ -110,6 +110,7 @@ const signUp = async (req, res) => {
 exports.signUp = signUp;
 const signIn = async (req, res) => {
     const { identifier, password } = req.body;
+    console.log("hi i am from vercel");
     try {
         const user = await user_1.default.findOne({
             $or: [{ email: identifier }, { username: identifier }],
@@ -136,7 +137,9 @@ const signIn = async (req, res) => {
                 res.cookie("token", token, {
                     maxAge: 1000 * 3600 * 24,
                     httpOnly: true,
-                    sameSite: "lax",
+                    domain: process.env.DOMAIN,
+                    path: "/",
+                    secure: true,
                 });
                 res.json({
                     name: user.name,
@@ -163,9 +166,11 @@ const googleAuthCallback = async (req, res) => {
     res.cookie("token", token, {
         maxAge: 1000 * 3600 * 24,
         httpOnly: true,
-        sameSite: "lax",
+        domain: process.env.DOMAIN,
+        path: "/",
+        secure: true,
     });
-    res.redirect("http://localhost:3000");
+    res.redirect(process.env.CLIENT_URL);
 };
 exports.googleAuthCallback = googleAuthCallback;
 const verifyUser = async (req, res) => {
@@ -232,7 +237,14 @@ const getUserData = async (req, res) => {
 exports.getUserData = getUserData;
 const logOut = async (req, res) => {
     await server_1.client.del(`user:${req?.user?.email}`);
-    res.clearCookie("token").send("logged out");
+    res
+        .clearCookie("token", {
+        httpOnly: true,
+        domain: process.env.DOMAIN,
+        path: "/",
+        secure: true,
+    })
+        .send("logged out");
 };
 exports.logOut = logOut;
 //# sourceMappingURL=authController.js.map
