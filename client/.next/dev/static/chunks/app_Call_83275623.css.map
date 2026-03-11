@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/yashr/Desktop/chat-app/client/app/Call.css"],"sourcesContent":["/* Shaking phone icon */\r\n.shake-icon {\r\n  color: #ccff00;\r\n  font-size: 26px;\r\n  animation: shake 1.2s infinite;\r\n}\r\n\r\n@keyframes shake {\r\n  0% { transform: rotate(0deg); }\r\n  15% { transform: rotate(15deg); }\r\n  30% { transform: rotate(-15deg); }\r\n  45% { transform: rotate(10deg); }\r\n  60% { transform: rotate(-10deg); }\r\n  75% { transform: rotate(6deg); }\r\n  100% { transform: rotate(0deg); }\r\n}\r\n\r\n/* Text gradient animation */\r\n.hint-text {\r\n  text-align: center;\r\n  font-size: 13px;\r\n  margin-bottom: 12px;\r\n  background: linear-gradient(\r\n    90deg,\r\n    #666,\r\n    #4dff88,\r\n    #666\r\n  );\r\n  background-size: 200% 100%;\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n  animation: slideHint 2.5s infinite;\r\n}\r\n\r\n@keyframes slideHint {\r\n  0% { background-position: 0% }\r\n  50% { background-position: 100% }\r\n  100% { background-position: 0% }\r\n}\r\n"],"names":[],"mappings":"AACA;;;;;;AAMA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAWA;;;;;;;;;;AAgBA"}}]
+}

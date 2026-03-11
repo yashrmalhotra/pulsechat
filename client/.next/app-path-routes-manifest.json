@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/calls/page": "/calls",
+  "/chat/[userid]/page": "/chat/[userid]",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/settings/page": "/settings",
+  "/signin/page": "/signin",
+  "/signup/page": "/signup",
+  "/verify/[code]/page": "/verify/[code]"
+}

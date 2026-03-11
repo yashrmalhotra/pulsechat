@@ -1,0 +1,62 @@
+/* [project]/app/Call.css [app-client] (css) */
+.shake-icon {
+  color: #cf0;
+  font-size: 26px;
+  animation: 1.2s infinite shake;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  15% {
+    transform: rotate(15deg);
+  }
+
+  30% {
+    transform: rotate(-15deg);
+  }
+
+  45% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.hint-text {
+  text-align: center;
+  background: linear-gradient(90deg, #666, #4dff88, #666) 0 0 / 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 12px;
+  font-size: 13px;
+  animation: 2.5s infinite slideHint;
+}
+
+@keyframes slideHint {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+/*# sourceMappingURL=app_Call_83275623.css.map*/

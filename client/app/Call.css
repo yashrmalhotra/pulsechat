@@ -1,0 +1,39 @@
+/* Shaking phone icon */
+.shake-icon {
+  color: #ccff00;
+  font-size: 26px;
+  animation: shake 1.2s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-15deg); }
+  45% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  75% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Text gradient animation */
+.hint-text {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 12px;
+  background: linear-gradient(
+    90deg,
+    #666,
+    #4dff88,
+    #666
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideHint 2.5s infinite;
+}
+
+@keyframes slideHint {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
