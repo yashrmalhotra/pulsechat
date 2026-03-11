@@ -42,7 +42,7 @@ const SignInForm = () => {
   const submit = async (data: any) => {
     try {
       setIsLoading(true)
-      const res = await axios.post("/api/auth/signin", data, {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}api/auth/signin`, data, {
         withCredentials: true,
       })
       setUser(res.data)

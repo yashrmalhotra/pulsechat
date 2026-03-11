@@ -37,7 +37,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
           try {
             setIsSearchLoading(true)
            const res = await axios.post(
-              "/api/user/search",
+              `${process.env.NEXT_PUBLIC_SERVER_URL}/api/user/search`,
               { query: e.target.value },
               { withCredentials: true },
             )
@@ -60,7 +60,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const logOut = async () => {
     try {
       setIsLoading(true)
-      await axios.delete("/api/auth/logout", { withCredentials: true })
+      await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/logout`, { withCredentials: true })
       setUser(undefined)
       setIsAuthenticated(false)
     } catch (error) {

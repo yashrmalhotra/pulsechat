@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc"
 
 const GoogleAuth = () => {
   const handleLogin = ()=>{
-    window.location.href ="http://localhost:3001/api/auth/googleauth"
+    window.location.href =`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/googleauth`
   }
   return (
     <Button onClick={handleLogin} className="w-full p-1 rounded-2xl mt-1 active:bg-gray-300 cursor-pointer flex justify-center items-center gap-3 bg-white border border-[#dadce0]" sx={{

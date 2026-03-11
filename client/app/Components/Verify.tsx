@@ -12,7 +12,7 @@ const Verify: React.FC<{ code: string }> = ({ code }) => {
     ;(async () => {
       try {
         setIsLoading(true)
-        const {data} = await axios.put(`/api/auth/verify/${code}`)
+        const {data} = await axios.put(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/verify/${code}`)
         
         setEmail(data?.email)
       } finally {

@@ -51,7 +51,7 @@ const SignupForm = () => {
   const submit = async (data: any) => {
     try {
       setIsLoading(true)
-      await axios.post("/api/auth/signup", data)
+      await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/signup`, data)
       setConfirmationPopup(true)
     } catch (error: any) {
       console.log("error", error.response.data.message)

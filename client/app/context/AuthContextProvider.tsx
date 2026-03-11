@@ -17,7 +17,7 @@ const AuthContextProvider: React.FC<ReactNodeProps> = ({ children }) => {
     ;(async () => {
       try {
         setIsAuthLoading(true)
-        const res = await axios.get("/api/auth/getUser", {
+        const res = await axios.get(`/api/auth/getUser`, {
           withCredentials: true,
         })
 
