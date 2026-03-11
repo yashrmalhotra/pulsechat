@@ -76,7 +76,7 @@ const SocketContextProvider: React.FC<{ children: ReactNode }> = ({
         })
       }
       if (!socket.current) {
-        socket.current = io("http://localhost:3001")
+        socket.current = io(process.env.NEXT_PUBLIC_SERVER_ULR)
       }
       socket.current.emit("user-online", {
         user: user?.username,
