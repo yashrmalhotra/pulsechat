@@ -64,7 +64,7 @@ const ChatWindow = () => {
         const userid = decodeURIComponent(params.userid as string)
         setIsUserLoading(true)
         const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_SERVER_URL}/api/chat/recipient-chat?recipient=${userid}&user=${user?.email}`,
+          `/api/chat/recipient-chat?recipient=${userid}&user=${user?.email}`,
           {
             withCredentials: true,
           },

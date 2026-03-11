@@ -35,7 +35,7 @@ export default function Settings() {
     setProfilePic(URL.createObjectURL(file))
     const formdata = new FormData()
     formdata.append("avatar", file)
-    await axios.put(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/user/upload-avatar`, formdata, {
+    await axios.put(`/api/user/upload-avatar`, formdata, {
       withCredentials: true,
       headers: {
         "Content-Type": "multipart/form-data",
@@ -48,7 +48,7 @@ export default function Settings() {
         setUsernameIsLoading(true)
       }
       await axios.put(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/user/setting`,
+        `/api/user/setting`,
         {
           email: user?.email,
           field,

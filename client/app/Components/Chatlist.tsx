@@ -23,7 +23,7 @@ const Chatlist = () => {
     ;(async () => {
       try {
         setIsLoading(true)
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/chat?email=${user?.email}`,{
+        const res = await axios.get(`/api/chat?email=${user?.email}`,{
           withCredentials:true
         })
         setChatList(res.data.chats)
@@ -38,7 +38,7 @@ const Chatlist = () => {
     ;(async () => {
       try {
         setIsCallLogsLoading(true)
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/call?email=${user?.email}`, {
+        const res = await axios.get(`/api/call?email=${user?.email}`, {
           withCredentials: true,
         })
         setRecentCallList(res.data.recentCallers)

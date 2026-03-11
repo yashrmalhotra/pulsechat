@@ -21,7 +21,7 @@ passport.use(
       try {
         const email = profile.emails?.[0]?.value!
         const avatarUrl = profile.photos?.[0]?.value
-        
+
         let user = await User.findOne({ email })
         let filename
         if (!user) {
@@ -34,7 +34,7 @@ passport.use(
             verificationStatus: true,
             googleId: profile.id!,
           })
-          
+
           if (avatarUrl) {
             filename = Date.now() + "-" + profile.id
             const res = await axios.get(avatarUrl, {
@@ -63,7 +63,7 @@ passport.use(
                 reject()
               })
             })
-            
+
             user.avatar = filename
             await user.save()
           }
@@ -75,14 +75,14 @@ passport.use(
           }
         }
         await client.hset(`user:${user.email}`, {
-            id: user?._id,
-            name: user?.name,
-            email: user?.email,
-            username: user?.username,
-            showReadStatus: user?.showReadStatus,
-            showLastSeen: user?.showLastSeen,
-            avatar: avatarUrl,
-          })
+          id: user?._id,
+          name: user?.name,
+          email: user?.email,
+          username: user?.username,
+          showReadStatus: user?.showReadStatus,
+          showLastSeen: user?.showLastSeen,
+          avatar: avatarUrl,
+        })
         done(null, user)
       } catch (error) {
         done(error as any, undefined)
@@ -127,7 +127,10 @@ export const signIn = async (req: Request, res: Response) => {
       if (user.authStrategy === "google") {
         throw new Error("Google users cannot login with password")
       }
-      const isPasswordCorrect = await bcrypt.compare(password, user.password as string)
+      const isPasswordCorrect = await bcrypt.compare(
+        password,
+        user.password as string,
+      )
       if (isPasswordCorrect) {
         const token = createToken({ identifier, id: user._id.toString() })
 
@@ -143,8 +146,9 @@ export const signIn = async (req: Request, res: Response) => {
         res.cookie("token", token, {
           maxAge: 1000 * 3600 * 24,
           httpOnly: true,
-          sameSite: "none",
-          secure:true
+          domain: process.env.DOMAIN,
+          path: "/",
+          secure: true,
         })
         res.json({
           name: user.name,
@@ -161,7 +165,6 @@ export const signIn = async (req: Request, res: Response) => {
   }
 }
 export const googleAuthCallback = async (req: Request, res: Response) => {
-  
   const token = await createToken({
     identifier: req?.user?.email,
     id: req?.user?._id.toString()!,
@@ -169,8 +172,9 @@ export const googleAuthCallback = async (req: Request, res: Response) => {
   res.cookie("token", token, {
     maxAge: 1000 * 3600 * 24,
     httpOnly: true,
-    sameSite: "none",
-    secure:true
+    domain: process.env.DOMAIN,
+    path: "/",
+    secure: true,
   })
   res.redirect(process.env.CLIENT_URL!)
 }
@@ -200,24 +204,24 @@ export const getUserData = async (req: Request, res: Response) => {
           name: cachedUser?.name,
           email: cachedUser?.email,
           username: cachedUser?.username,
-          showReadStatus: cachedUser?.showReadStatus==="true",
-          showLastSeen: cachedUser?.showLastSeen==="true",
-          avatar:cachedUser?.avatar,
+          showReadStatus: cachedUser?.showReadStatus === "true",
+          showLastSeen: cachedUser?.showLastSeen === "true",
+          avatar: cachedUser?.avatar,
         })
       } else {
         const user = await User.findById(payload.id).select(
           "name email username showLastSeen showReadStatus avatar publicKey",
         )
         await client.hset(`user:${user?.email}`, {
-            id: user?._id,
-            name: user?.name,
-            email: user?.email,
-            username: user?.username,
-            showReadStatus: user?.showReadStatus,
-            showLastSeen: user?.showLastSeen,
-            avatar: `data:${file?.file?.metadata?.contentType};base64,${file?.buffer.toString("base64")}`,
-          })
-          await client.expire(`user:${user?.email}`,3600*24)
+          id: user?._id,
+          name: user?.name,
+          email: user?.email,
+          username: user?.username,
+          showReadStatus: user?.showReadStatus,
+          showLastSeen: user?.showLastSeen,
+          avatar: `data:${file?.file?.metadata?.contentType};base64,${file?.buffer.toString("base64")}`,
+        })
+        await client.expire(`user:${user?.email}`, 3600 * 24)
         res.json({
           id: user?._id,
           name: user?.name,
@@ -239,5 +243,12 @@ export const getUserData = async (req: Request, res: Response) => {
 
 export const logOut = async (req: Request, res: Response) => {
   await client.del(`user:${req?.user?.email}`)
-  res.clearCookie("token").send("logged out")
+  res
+    .clearCookie("token", {
+      httpOnly: true,
+      domain: process.env.DOMAIN,
+      path: "/",
+      secure: true,
+    })
+    .send("logged out")
 }
