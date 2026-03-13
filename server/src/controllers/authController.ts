@@ -151,9 +151,13 @@ export const signIn = async (req: Request, res: Response) => {
           secure: true,
         })
         res.json({
-          name: user.name,
-          email: user.email,
-          username: user.username,
+                    id: user?._id,
+          name: user?.name,
+          email: user?.email,
+          username: user?.username,
+          showReadStatus: user?.showReadStatus,
+          showLastSeen: user?.showLastSeen,
+          avatar: user?.avatar,
         })
       } else {
         throw new Error("Password is wrong")
