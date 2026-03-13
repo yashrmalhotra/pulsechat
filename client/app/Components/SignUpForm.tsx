@@ -225,7 +225,7 @@ const SignupForm = () => {
         onClose={() => setConfirmationPopup(false)}
       >
         <Typography>
-          We have sent you an email to veify please click on link in mail{" "}
+          We have sent you an email to veify please click on link in mail
         </Typography>
         <DialogActions
           onClick={() => setConfirmationPopup(false)}
