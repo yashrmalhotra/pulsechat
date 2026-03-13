@@ -115,7 +115,7 @@ export const signUp = async (req: Request, res: Response) => {
 }
 export const signIn = async (req: Request, res: Response) => {
   const { identifier, password } = req.body
-  console.log("hi i am from vercel")
+ 
   try {
     const user = await User.findOne({
       $or: [{ email: identifier }, { username: identifier }],
@@ -146,12 +146,10 @@ export const signIn = async (req: Request, res: Response) => {
         res.cookie("token", token, {
           maxAge: 1000 * 3600 * 24,
           httpOnly: true,
-          domain: process.env.DOMAIN,
-          path: "/",
-          secure: true,
+         
         })
         res.json({
-                    id: user?._id,
+          id: user?._id,
           name: user?.name,
           email: user?.email,
           username: user?.username,
@@ -176,9 +174,7 @@ export const googleAuthCallback = async (req: Request, res: Response) => {
   res.cookie("token", token, {
     maxAge: 1000 * 3600 * 24,
     httpOnly: true,
-    domain: process.env.DOMAIN,
-    path: "/",
-    secure: true,
+    
   })
   res.redirect(process.env.CLIENT_URL!)
 }
@@ -247,12 +243,9 @@ export const getUserData = async (req: Request, res: Response) => {
 
 export const logOut = async (req: Request, res: Response) => {
   await client.del(`user:${req?.user?.email}`)
-  res
-    .clearCookie("token", {
+  res.clearCookie("token", {
       httpOnly: true,
-      domain: process.env.DOMAIN,
-      path: "/",
-      secure: true,
+    
     })
     .send("logged out")
 }

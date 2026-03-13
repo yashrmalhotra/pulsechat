@@ -8,13 +8,13 @@ const kafka = new kafkajs_1.Kafka({
     brokers: [process.env.KAFKA_URL],
     ssl: {
         rejectUnauthorized: true,
-        ca: [ca],
+        ca: [ca]
     },
     sasl: {
         username: process.env.KAFKA_USERNAME,
         password: process.env.KAFKA_PASSWORD,
-        mechanism: "plain",
-    },
+        mechanism: "plain"
+    }
 });
 const connectProducer = async () => {
     if (exports.producer)

@@ -3,15 +3,15 @@ const ca = process.env.KAFKA_CA?.replace(/\\n/g,"\n")
 const kafka = new Kafka({
   clientId: "chat-app",
   brokers: [process.env.KAFKA_URL!],
-  ssl: {
+   ssl:{
     rejectUnauthorized:true,
-    ca: [ca!],
+    ca:[ca!]
   },
-  sasl: {
-    username: process.env.KAFKA_USERNAME!,
-    password: process.env.KAFKA_PASSWORD!,
-    mechanism: "plain",
-  },
+  sasl:{
+    username:process.env.KAFKA_USERNAME!,
+    password:process.env.KAFKA_PASSWORD!,
+    mechanism:"plain"
+  }
 })
 export let producer: Producer
 export const connectProducer = async () => {

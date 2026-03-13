@@ -11,6 +11,7 @@ const kafka = new Kafka({
   clientId: "chat-consumer",
   brokers: [process.env.KAFKA_URL!],
    ssl:{
+    rejectUnauthorized:true,
     ca:[ca!]
   },
   sasl:{
