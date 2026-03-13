@@ -1,1 +1,18 @@
-[00:00:18.219] Server  LOG      ✓ Ready in 13.7s
+[00:00:14.662] Server  LOG      ✓ Ready in 11s
+[00:00:57.232] Server  LOG      ○ Compiling / ...
+[00:02:09.344] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:14.703] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:16.684] Server  ERROR   (node:22220) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[00:02:19.422] Server  LOG      ○ Compiling /signin ...
+[00:06:07.935] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/signin AggregateError
+[00:06:07.958] Server  ERROR   AggregateError
+[00:06:11.708] Server  LOG      ○ Compiling /_error ...
+[00:06:39.372] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/signin AggregateError
+[00:06:39.435] Server  ERROR   AggregateError
+[00:11:19.059] Server  LOG      ○ Compiling /chat/[userid] ...
+[00:14:43.139] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:45.771] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:13.360] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:43.746] Server  LOG      ○ Compiling /settings ...
+[00:24:44.982] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

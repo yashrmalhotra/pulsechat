@@ -192,7 +192,7 @@ const SearchBar = ({ showInput, setShowInput, setIsSearchLoading, setUsers })=>{
         timeoutRef.current = setTimeout(async ()=>{
             try {
                 setIsSearchLoading(true);
-                const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post("/api/user/search", {
+                const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`/api/user/search`, {
                     query: e.target.value
                 }, {
                     withCredentials: true
@@ -215,7 +215,7 @@ const SearchBar = ({ showInput, setShowInput, setIsSearchLoading, setUsers })=>{
     const logOut = async ()=>{
         try {
             setIsLoading(true);
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete("/api/auth/logout", {
+            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].delete(`/api/auth/logout`, {
                 withCredentials: true
             });
             setUser(undefined);
@@ -653,7 +653,9 @@ const Chatlist = ()=>{
         (async ()=>{
             try {
                 setIsLoading(true);
-                const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(`/api/chat?email=${user?.email}`);
+                const res = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(`/api/chat?email=${user?.email}`, {
+                    withCredentials: true
+                });
                 setChatList(res.data.chats);
                 setTotalUnreadCount(res.data.totalUnreadCount);
             } finally{
@@ -696,7 +698,7 @@ const Chatlist = ()=>{
                 setIsSearchLoading: setIsSearchLoading
             }, void 0, false, {
                 fileName: "[project]/app/Components/Chatlist.tsx",
-                lineNumber: 62,
+                lineNumber: 64,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             showInput ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -705,18 +707,18 @@ const Chatlist = ()=>{
                     users: users
                 }, void 0, false, {
                     fileName: "[project]/app/Components/Chatlist.tsx",
-                    lineNumber: 70,
+                    lineNumber: 72,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/Components/Chatlist.tsx",
-                lineNumber: 69,
+                lineNumber: 71,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)) : chatList.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: "No recent chats"
             }, void 0, false, {
                 fileName: "[project]/app/Components/Chatlist.tsx",
-                lineNumber: 73,
+                lineNumber: 75,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)) : isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                 className: "w-full md:w-1/2 xl:w-1/3 pt-4",
@@ -749,7 +751,7 @@ const Chatlist = ()=>{
                                         animation: "wave"
                                     }, void 0, false, {
                                         fileName: "[project]/app/Components/Chatlist.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 100,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -765,7 +767,7 @@ const Chatlist = ()=>{
                                                 animation: "wave"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Components/Chatlist.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 109,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Skeleton$2f$Skeleton$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Skeleton$3e$__["Skeleton"], {
@@ -775,34 +777,34 @@ const Chatlist = ()=>{
                                                 animation: "wave"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Components/Chatlist.tsx",
-                                                lineNumber: 115,
+                                                lineNumber: 117,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Components/Chatlist.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 107,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Components/Chatlist.tsx",
-                                lineNumber: 89,
+                                lineNumber: 91,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/app/Components/Chatlist.tsx",
-                            lineNumber: 78,
+                            lineNumber: 80,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, i, false, {
                         fileName: "[project]/app/Components/Chatlist.tsx",
-                        lineNumber: 77,
+                        lineNumber: 79,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/app/Components/Chatlist.tsx",
-                lineNumber: 75,
+                lineNumber: 77,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)) : chatList.map((chat, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     href: `/chat/${chat.username}`,
@@ -839,7 +841,7 @@ const Chatlist = ()=>{
                                             children: chat.name[0].toUpperCase()
                                         }, void 0, false, {
                                             fileName: "[project]/app/Components/Chatlist.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 162,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " ",
@@ -850,7 +852,7 @@ const Chatlist = ()=>{
                                                     children: chat.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Components/Chatlist.tsx",
-                                                    lineNumber: 165,
+                                                    lineNumber: 167,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 " ",
@@ -858,12 +860,12 @@ const Chatlist = ()=>{
                                                     className: "rounded-full inline-flex justify-center items-center w-3 h-3 bg-blue-400 text-white",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$ti$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TiTick"], {}, void 0, false, {
                                                         fileName: "[project]/app/Components/Chatlist.tsx",
-                                                        lineNumber: 168,
+                                                        lineNumber: 170,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Components/Chatlist.tsx",
-                                                    lineNumber: 167,
+                                                    lineNumber: 169,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -871,19 +873,19 @@ const Chatlist = ()=>{
                                                     children: chat.lastMessage
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/Components/Chatlist.tsx",
-                                                    lineNumber: 171,
+                                                    lineNumber: 173,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Components/Chatlist.tsx",
-                                            lineNumber: 164,
+                                            lineNumber: 166,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Components/Chatlist.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 153,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -894,7 +896,7 @@ const Chatlist = ()=>{
                                             children: chat.unreadCount
                                         }, void 0, false, {
                                             fileName: "[project]/app/Components/Chatlist.tsx",
-                                            lineNumber: 177,
+                                            lineNumber: 179,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -902,35 +904,35 @@ const Chatlist = ()=>{
                                             children: dateFormater(chat.lastDate) || chat.lastTime
                                         }, void 0, false, {
                                             fileName: "[project]/app/Components/Chatlist.tsx",
-                                            lineNumber: 183,
+                                            lineNumber: 185,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Components/Chatlist.tsx",
-                                    lineNumber: 176,
+                                    lineNumber: 178,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Components/Chatlist.tsx",
-                            lineNumber: 135,
+                            lineNumber: 137,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/app/Components/Chatlist.tsx",
-                        lineNumber: 134,
+                        lineNumber: 136,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, chat._id, false, {
                     fileName: "[project]/app/Components/Chatlist.tsx",
-                    lineNumber: 129,
+                    lineNumber: 131,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0)))
         ]
     }, void 0, true, {
         fileName: "[project]/app/Components/Chatlist.tsx",
-        lineNumber: 61,
+        lineNumber: 63,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

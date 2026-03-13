@@ -119,7 +119,7 @@ function Settings() {
         setProfilePic(URL.createObjectURL(file));
         const formdata = new FormData();
         formdata.append("avatar", file);
-        await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].put("/api/user/upload-avatar", formdata, {
+        await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].put(`/api/user/upload-avatar`, formdata, {
             withCredentials: true,
             headers: {
                 "Content-Type": "multipart/form-data"
@@ -131,7 +131,7 @@ function Settings() {
             if (field === "username") {
                 setUsernameIsLoading(true);
             }
-            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].put("/api/user/setting", {
+            await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].put(`/api/user/setting`, {
                 email: user?.email,
                 field,
                 value

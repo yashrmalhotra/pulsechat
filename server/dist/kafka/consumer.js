@@ -4,9 +4,19 @@ exports.connectConsumer = exports.consumer = void 0;
 const kafkajs_1 = require("kafkajs");
 const chatDBOperations_1 = require("../utills/chatDBOperations");
 const callDBOperations_1 = require("../utills/callDBOperations");
+const ca = process.env.KAFKA_CA?.replace(/\\n/g, "\n");
 const kafka = new kafkajs_1.Kafka({
     clientId: "chat-consumer",
     brokers: [process.env.KAFKA_URL],
+    ssl: {
+        rejectUnauthorized: true,
+        ca: [ca]
+    },
+    sasl: {
+        username: process.env.KAFKA_USERNAME,
+        password: process.env.KAFKA_PASSWORD,
+        mechanism: "plain"
+    }
 });
 exports.consumer = kafka.consumer({ groupId: "chat-group-v3" });
 const connectConsumer = async () => {
