@@ -36,10 +36,11 @@ export const sendMail = async (email: string, code: string) => {
   const { error } = await resend.emails.send({
     from: process.env.EMAIL!,
     to: email,
-    subject: "Verification mail",
+    subject: "PulseChat - Verification mail",
     html: `<p>Please click on the link <a href=${process.env.CLIENT_URL}/verify/${code} style="color:blue; text-decoration: underline; font-weight:bold;">Click here to verify</a>`,
   });
   if(error){
+    console.log("error of email",error)
     throw new Error(error.message)
   }
 
