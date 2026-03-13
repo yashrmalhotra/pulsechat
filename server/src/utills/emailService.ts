@@ -13,25 +13,17 @@ const transporter = nodemailer.createTransport({
 })
 
 export const sendMail = async (email: string, code: string) => {
-  const cooldown = false
-  if (cooldown) return
   try {
      await transporter.sendMail(
     {
-      from: `Chat-app ${process.env.EMAIL}`,
+      from: `PulseChat ${process.env.EMAIL}`,
       to: email,
       subject: "Verification Email",
       html: `<p>Please click on the link <a href=${process.env.CLIENT_URL}/verify/${code} style="color:blue; text-decoration: underline; font-weight:bold;">Click here to verify</a>`,
-    },
-    async (error:any,emailsuccess:any)=>{
-        if(error){
-            console.log(error)
-        }else{
-            console.log("email sent succesfully")
-        }
-    }
-  )
+    })
+    console.log("email sent successfully")
   } catch (error:any) {
+    console.log("email error",error)
     throw new Error(error.message)
   }
 }
