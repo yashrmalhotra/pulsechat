@@ -136,6 +136,9 @@ const signIn = async (req, res) => {
                 res.cookie("token", token, {
                     maxAge: 1000 * 3600 * 24,
                     httpOnly: true,
+                    domain: process.env.DOMAIN,
+                    path: "/",
+                    secure: true,
                 });
                 res.json({
                     id: user?._id,
@@ -166,6 +169,9 @@ const googleAuthCallback = async (req, res) => {
     res.cookie("token", token, {
         maxAge: 1000 * 3600 * 24,
         httpOnly: true,
+        domain: process.env.DOMAIN,
+        path: "/",
+        secure: true,
     });
     res.redirect(process.env.CLIENT_URL);
 };
@@ -234,8 +240,12 @@ const getUserData = async (req, res) => {
 exports.getUserData = getUserData;
 const logOut = async (req, res) => {
     await server_1.client.del(`user:${req?.user?.email}`);
-    res.clearCookie("token", {
+    res
+        .clearCookie("token", {
         httpOnly: true,
+        domain: process.env.DOMAIN,
+        path: "/",
+        secure: true,
     })
         .send("logged out");
 };
