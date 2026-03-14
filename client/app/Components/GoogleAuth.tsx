@@ -21,7 +21,6 @@ const GoogleAuthComponent = () => {
       const params = query.get("token")
        if(!params) return
       const token = decodeURI(params)
-      console.log(token)
       try {
         setIsLoading(true)
         const {data} = await axios.get(`/api/auth/getoauthuser?token=${token}`,{

@@ -319,12 +319,19 @@ This project demonstrates:
 
 ---
 
-# 📜 License
+# Test Credentials
 
-MIT License
+email1 - temp.user1@gmail.com
 
----
+password - asdf1234
+
+email1 - temp.user2@gmail.com
+
+password - asdf1234
+
+
+
 
 # 👨‍💻 Author
 
-Yash Malhotra
+Yash Ram Malhotra

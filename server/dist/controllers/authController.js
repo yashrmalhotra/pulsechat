@@ -163,8 +163,8 @@ const signIn = async (req, res) => {
 exports.signIn = signIn;
 const googleAuthCallback = async (req, res) => {
     const token = await (0, authservice_1.createToken)({
-        identifier: req?.email,
-        id: req?.id,
+        identifier: req?.user?.email,
+        id: req?.user?.id,
     });
     res.redirect(`${process.env.CLIENT_URL}/signin?token=${token}`);
 };
@@ -246,8 +246,9 @@ exports.logOut = logOut;
 const getOauthUser = async (req, res) => {
     const { token } = req.query;
     try {
-        const { id } = await (0, authservice_1.getPayload)(token);
-        const user = await user_1.default.findById(id);
+        const token_1 = await (0, authservice_1.getPayload)(token);
+        console.log("token", token_1);
+        const user = await user_1.default.findById(token_1.id);
         res.cookie("token", token, {
             sameSite: "none",
             maxAge: 3600 * 24 * 7 * 1000,

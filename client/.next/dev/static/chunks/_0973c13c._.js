@@ -135,23 +135,22 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const GoogleAuth = ()=>{
+const GoogleAuthComponent = ()=>{
     _s();
     const [isError, setIsError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const { setUser } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const query = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchParams"])();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "GoogleAuth.useEffect": ()=>{
+        "GoogleAuthComponent.useEffect": ()=>{
             ({
-                "GoogleAuth.useEffect": async ()=>{
+                "GoogleAuthComponent.useEffect": async ()=>{
                     const params = query.get("token");
                     if (!params) return;
                     const token = decodeURI(params);
-                    console.log(token);
                     try {
                         setIsLoading(true);
-                        const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`/api/auth/getoauthuser?token${token}`, {
+                        const { data } = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`/api/auth/getoauthuser?token=${token}`, {
                             withCredentials: true
                         });
                         setUser(data.user);
@@ -161,9 +160,9 @@ const GoogleAuth = ()=>{
                         setIsLoading(false);
                     }
                 }
-            })["GoogleAuth.useEffect"]();
+            })["GoogleAuthComponent.useEffect"]();
         }
-    }["GoogleAuth.useEffect"], []);
+    }["GoogleAuthComponent.useEffect"], []);
     const handleLogin = ()=>{
         window.location.href = `${"TURBOPACK compile-time value", "http://localhost:3001"}/api/auth/googleauth`;
     };
@@ -251,16 +250,32 @@ const GoogleAuth = ()=>{
         ]
     }, void 0, true);
 };
-_s(GoogleAuth, "Q8172fG3bLHJ2rg11z35YEtbG3M=", false, function() {
+_s(GoogleAuthComponent, "Q8172fG3bLHJ2rg11z35YEtbG3M=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchParams"]
     ];
 });
-_c = GoogleAuth;
+_c = GoogleAuthComponent;
+const GoogleAuth = ()=>{
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Suspense"], {
+        fallback: null,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(GoogleAuthComponent, {}, void 0, false, {
+            fileName: "[project]/app/Components/GoogleAuth.tsx",
+            lineNumber: 95,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/app/Components/GoogleAuth.tsx",
+        lineNumber: 94,
+        columnNumber: 10
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_c1 = GoogleAuth;
 const __TURBOPACK__default__export__ = GoogleAuth;
-var _c;
-__turbopack_context__.k.register(_c, "GoogleAuth");
+var _c, _c1;
+__turbopack_context__.k.register(_c, "GoogleAuthComponent");
+__turbopack_context__.k.register(_c1, "GoogleAuth");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
