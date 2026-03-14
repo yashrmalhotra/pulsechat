@@ -1,18 +1,19 @@
 "use client"
 import { Button } from "@mui/material"
-import React, { useEffect, useState } from "react"
+import React, { Suspense, useEffect, useState } from "react"
 import { FcGoogle } from "react-icons/fc"
 import { Dialog, Typography, CircularProgress } from "@mui/material"
 import { useParams, useSearchParams } from "next/navigation"
 import { useAuth } from "../context/AuthContextProvider"
 import axios from "axios"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import { SearchParamsContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime"
-const GoogleAuth = () => {
+const GoogleAuthComponent = () => {
   const [isError, setIsError] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const {setUser} = useAuth()!
   const query = useSearchParams()
+  
   
   useEffect(()=>{
     (
@@ -23,7 +24,7 @@ const GoogleAuth = () => {
       console.log(token)
       try {
         setIsLoading(true)
-        const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+        const {data} = await axios.get(`/api/auth/getoauthuser?token=${token}`,{
           withCredentials:true
         })
         setUser(data.user)
@@ -90,5 +91,9 @@ const GoogleAuth = () => {
     </>
   )
 }
-
+const GoogleAuth = ()=>{
+  return <Suspense fallback={null}>
+    <GoogleAuthComponent/>
+  </Suspense>
+}
 export default GoogleAuth
