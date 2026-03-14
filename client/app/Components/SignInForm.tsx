@@ -56,6 +56,18 @@ const SignInForm = () => {
   const onSubmit = () => {
     handleSubmit(submit)()
   }
+    if (isAuthLoading) {
+      return (
+        <div className="flex w-full h-screen justify-center items-center">
+          <CircularProgress
+            size={35}
+            sx={{
+              color: "#cc00ff",
+            }}
+          />
+        </div>
+      )
+    }
   return (
     <div className="w-full h-screen flex justify-center items-center bg-blue-50">
       <div className="w-[80%] mx-2 sm:w-1/2 md:w-1/3  min-h-1/3 p-3 bg-[#cc00ff] rounded-2xl">
