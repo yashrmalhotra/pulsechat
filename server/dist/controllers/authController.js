@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.logOut = exports.getUserData = exports.verifyUser = exports.googleAuthCallback = exports.signIn = exports.signUp = void 0;
+exports.getOauthUser = exports.logOut = exports.getUserData = exports.verifyUser = exports.googleAuthCallback = exports.signIn = exports.signUp = void 0;
 const user_1 = __importDefault(require("../models/user"));
 const nanoid_1 = require("nanoid");
 const emailService_1 = require("../utills/emailService");
@@ -23,7 +23,7 @@ passport_1.default.use(new passport_google_oauth20_1.Strategy({
     try {
         const email = profile.emails?.[0]?.value;
         const avatarUrl = profile.photos?.[0]?.value;
-        let user = await user_1.default.findOne({ email });
+        let user = await user_1.default.findOne({ email }).select("email");
         let filename;
         if (!user) {
             const nid = (0, nanoid_1.nanoid)();
@@ -78,7 +78,7 @@ passport_1.default.use(new passport_google_oauth20_1.Strategy({
             showLastSeen: user?.showLastSeen,
             avatar: avatarUrl,
         });
-        done(null, user);
+        done(null, { email: user.email, id: user._id });
     }
     catch (error) {
         done(error, undefined);
@@ -163,18 +163,11 @@ const signIn = async (req, res) => {
 exports.signIn = signIn;
 const googleAuthCallback = async (req, res) => {
     const token = await (0, authservice_1.createToken)({
-        identifier: req?.user?.email,
-        id: req?.user?._id.toString(),
+        identifier: req?.email,
+        id: req?.id,
     });
-    res.cookie("token", token, {
-        maxAge: 1000 * 3600 * 24,
-        httpOnly: true,
-        // domain: process.env.DOMAIN,
-        sameSite: "none",
-        path: "/",
-        secure: true,
-    });
-    res.redirect(process.env.CLIENT_URL);
+    res.json({ email: req.email });
+    res.redirect(`${process.env.CLIENT_URL}?token=${token}`);
 };
 exports.googleAuthCallback = googleAuthCallback;
 const verifyUser = async (req, res) => {
@@ -251,4 +244,23 @@ const logOut = async (req, res) => {
         .send("logged out");
 };
 exports.logOut = logOut;
+const getOauthUser = async (req, res) => {
+    const { token } = req.params;
+    try {
+        const { id } = await (0, authservice_1.getPayload)(token);
+        const user = await user_1.default.findById(id);
+        res.cookie("token", token, {
+            sameSite: "none",
+            maxAge: 3600 * 24 * 7 * 1000,
+            httpOnly: true,
+            path: "/",
+            secure: true
+        });
+        res.json({ user });
+    }
+    catch (error) {
+        res.status(500).send("error");
+    }
+};
+exports.getOauthUser = getOauthUser;
 //# sourceMappingURL=authController.js.map

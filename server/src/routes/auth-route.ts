@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express"
 import { authentication } from "../middlewares/auth-middleware"
 import passport from "passport"
-import { getUserData, googleAuthCallback, logOut, signIn, signUp, verifyUser } from "../controllers/authController"
+import { getOauthUser, getUserData, googleAuthCallback, logOut, signIn, signUp, verifyUser } from "../controllers/authController"
 
 
 const router = express.Router()
@@ -16,7 +16,7 @@ router.get("/google/callback",passport.authenticate("google",{
     failureRedirect:"http://localhost:3000/signin"
 }),googleAuthCallback)
 router.post("/signin", signIn)
-
+router.get("/getoauthuser",getOauthUser)
 router.use(authentication)
 router.get("/getUser", getUserData)
 router.delete("/logout", logOut)

@@ -22,7 +22,7 @@ passport.use(
         const email = profile.emails?.[0]?.value!
         const avatarUrl = profile.photos?.[0]?.value
 
-        let user = await User.findOne({ email })
+        let user = await User.findOne({ email }).select("email")
         let filename
         if (!user) {
           const nid = nanoid()!
@@ -83,7 +83,7 @@ passport.use(
           showLastSeen: user?.showLastSeen,
           avatar: avatarUrl,
         })
-        done(null, user)
+        done(null, {email:user.email, id:user._id})
       } catch (error) {
         done(error as any, undefined)
       }
@@ -146,7 +146,7 @@ export const signIn = async (req: Request, res: Response) => {
         res.cookie("token", token, {
           maxAge: 1000 * 3600 * 24,
           httpOnly: true,
-          sameSite:"none",
+          sameSite: "none",
           path: "/",
           secure: true,
         })
@@ -170,18 +170,11 @@ export const signIn = async (req: Request, res: Response) => {
 }
 export const googleAuthCallback = async (req: Request, res: Response) => {
   const token = await createToken({
-    identifier: req?.user?.email,
-    id: req?.user?._id.toString()!,
+    identifier: req?.email,
+    id: req?.id,
   })
-  res.cookie("token", token, {
-    maxAge: 1000 * 3600 * 24,
-    httpOnly: true,
-    // domain: process.env.DOMAIN,
-    sameSite:"none",
-    path: "/",
-    secure: true,
-  })
-  res.redirect(process.env.CLIENT_URL!)
+  res.json({email:req.email})
+  res.redirect(`${process.env.CLIENT_URL!}?token=${token}`)
 }
 export const verifyUser = async (req: Request, res: Response) => {
   const verificationCode = req.params.code as any
@@ -251,9 +244,28 @@ export const logOut = async (req: Request, res: Response) => {
   res
     .clearCookie("token", {
       httpOnly: true,
-         sameSite:"none",
+      sameSite: "none",
       path: "/",
       secure: true,
     })
     .send("logged out")
+}
+
+export const getOauthUser = async (req:Request,res:Response)=>{
+  const {token} = req.params!
+  try {
+    const {id} = await getPayload(token as string)
+    const user = await User.findById(id)!
+    res.cookie("token",token,{
+      sameSite:"none",
+      maxAge:3600*24*7*1000,
+      httpOnly:true,
+      path:"/",
+      secure:true
+    })
+    res.json({user})
+
+  } catch (error) {
+    res.status(500).send("error")
+  }
 }

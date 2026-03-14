@@ -19,6 +19,7 @@ router.get("/google/callback", passport_1.default.authenticate("google", {
     failureRedirect: "http://localhost:3000/signin"
 }), authController_1.googleAuthCallback);
 router.post("/signin", authController_1.signIn);
+router.get("/getoauthuser", authController_1.getOauthUser);
 router.use(auth_middleware_1.authentication);
 router.get("/getUser", authController_1.getUserData);
 router.delete("/logout", authController_1.logOut);

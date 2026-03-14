@@ -139,7 +139,6 @@ Redis is used for:
 * storing active socket connections
 
 Example presence key:
-
 ```
 user:{userId}:online
 ```
@@ -155,7 +154,6 @@ Services:
 * MongoDB
 * Redis
 * Kafka
-* Zookeeper
 
 Run:
 
@@ -242,35 +240,34 @@ Create a `.env` file in the backend root.
 
 ```
 # Server
-PORT=5000
-NODE_ENV=development
-
-# MongoDB
+PORT=3001
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/pulsechat
-
-# Redis (Aiven)
 REDIS_URL=
-
-# Kafka (Aiven)
 KAFKA_BROKER=your-kafka-broker:9092
 KAFKA_USERNAME=yourusername
 KAFKA_PASSWORD=yourpassword
 KAFKA_CA=your-kafka-certificate
+CLIENT_URL=http://localhost:3000
 
-# Socket
-SOCKET_CORS_ORIGIN=http://localhost:3000
 
-# WebRTC
-TURN_SERVER_URL=turn:your-turn-server
-TURN_USERNAME=username
-TURN_PASSWORD=password
-```
+#For email verificatin
+APP_PASS=your_app_pass
+EMAIL=sender_email
+
+#for google oauth
+GOOGLE_CLIENT_ID=your_client_id
+GOOGLE_CLIENT_SECRET=your_client_id
+CALLBACK_URL=oauth_callback_url
+
+
+
+
+
 
 Frontend `.env`:
 
 ```
-NEXT_PUBLIC_API_URL=http://localhost:5000
-NEXT_PUBLIC_SOCKET_URL=http://localhost:5000
+NEXT_PUBLIC_SERVER_URL=http://localhost:3001
 ```
 
 ---
