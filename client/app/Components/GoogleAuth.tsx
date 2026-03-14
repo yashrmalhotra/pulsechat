@@ -3,21 +3,18 @@ import { Button } from "@mui/material"
 import React, { Suspense, useEffect, useState } from "react"
 import { FcGoogle } from "react-icons/fc"
 import { Dialog, Typography, CircularProgress } from "@mui/material"
-import { useParams, useSearchParams } from "next/navigation"
+import {  useSearchParams } from "next/navigation"
 import { useAuth } from "../context/AuthContextProvider"
 import axios from "axios"
-import { useRouter } from "next/navigation"
-import { SearchParamsContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime"
 const GoogleAuthComponent = () => {
   const [isError, setIsError] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const {setUser} = useAuth()!
+  const {setUser,setIsAuthenticated} = useAuth()!
   const query = useSearchParams()
-  
   
   useEffect(()=>{
     (
-     async ()=>{
+     async ()=>{ 
       const params = query.get("token")
        if(!params) return
       const token = decodeURI(params)
@@ -27,6 +24,7 @@ const GoogleAuthComponent = () => {
           withCredentials:true
         })
         setUser(data.user)
+        setIsAuthenticated(true)
       } catch (error) {
         setIsError(true)
       }finally{

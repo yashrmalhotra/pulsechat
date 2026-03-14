@@ -15,7 +15,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-      callbackURL: `${process.env.GOOGLE_CALLBACK_URL}`,
+      callbackURL: process.env.GOOGLE_CALLBACK,
     },
     async (_accessToken, _refreshToken, profile, done) => {
       try {
@@ -255,7 +255,7 @@ export const getOauthUser = async (req:Request,res:Response)=>{
   const {token} = req.query!
   try {
     const token_1 = await getPayload(token as string)
-    console.log("token",token_1)
+ 
     const user = await User.findById(token_1.id)!
     res.cookie("token",token,{
       sameSite:"none",

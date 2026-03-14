@@ -47,7 +47,6 @@ const SignInForm = () => {
       })
       setUser(res.data)
       setIsAuthenticated(true)
-      router.replace("/")
     } catch (error: any) {
       setError("root", { type: "axios", message: error.response.data.message })
     } finally {
