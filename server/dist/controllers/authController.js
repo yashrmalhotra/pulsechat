@@ -166,7 +166,6 @@ const googleAuthCallback = async (req, res) => {
         identifier: req?.email,
         id: req?.id,
     });
-    res.json({ email: req.email });
     res.redirect(`${process.env.CLIENT_URL}?token=${token}`);
 };
 exports.googleAuthCallback = googleAuthCallback;

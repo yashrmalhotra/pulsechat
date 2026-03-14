@@ -19,14 +19,15 @@ const GoogleAuth = () => {
       const token = decodeURI(params.token as string)
       try {
         setIsLoading(true)
-        const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`)
+        const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+          withCredentials:true
+        })
         setUser(data.user)
       } catch (error) {
         setIsError(true)
       }finally{
         setIsLoading(false)
       }
-      
      }
     )()
 
