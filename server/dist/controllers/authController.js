@@ -244,7 +244,7 @@ const logOut = async (req, res) => {
 };
 exports.logOut = logOut;
 const getOauthUser = async (req, res) => {
-    const { token } = req.params;
+    const { token } = req.query;
     try {
         const { id } = await (0, authservice_1.getPayload)(token);
         const user = await user_1.default.findById(id);

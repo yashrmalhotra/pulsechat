@@ -251,7 +251,7 @@ export const logOut = async (req: Request, res: Response) => {
 }
 
 export const getOauthUser = async (req:Request,res:Response)=>{
-  const {token} = req.params!
+  const {token} = req.query!
   try {
     const {id} = await getPayload(token as string)
     const user = await User.findById(id)!

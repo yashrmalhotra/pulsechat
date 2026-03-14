@@ -10,7 +10,6 @@ export const saveChat = async (chat: ChatInerface) => {
 }
 export const updateChatDeliveredStatus = async (recipientEmail: string) => {
   try {
-    console.log("rcemail",recipientEmail)
     await Chat.updateMany({recipientEmail},{$set:{status:"delivered"}})
   } catch (error: any) {
     console.log("error", error)
@@ -19,7 +18,6 @@ export const updateChatDeliveredStatus = async (recipientEmail: string) => {
 }
 export const updateChatBetweenTwoDeliveredStatus = async ({recipientEmail,senderEmail}:any) => {
   try {
-    console.log("rcemail",recipientEmail)
     await Chat.updateMany({recipientEmail,senderEmail},{$set:{status:"delivered"}})
   } catch (error: any) {
     console.log("error", error)

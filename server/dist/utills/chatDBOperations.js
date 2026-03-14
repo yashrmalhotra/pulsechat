@@ -17,7 +17,6 @@ const saveChat = async (chat) => {
 exports.saveChat = saveChat;
 const updateChatDeliveredStatus = async (recipientEmail) => {
     try {
-        console.log("rcemail", recipientEmail);
         await chat_1.default.updateMany({ recipientEmail }, { $set: { status: "delivered" } });
     }
     catch (error) {
@@ -28,7 +27,6 @@ const updateChatDeliveredStatus = async (recipientEmail) => {
 exports.updateChatDeliveredStatus = updateChatDeliveredStatus;
 const updateChatBetweenTwoDeliveredStatus = async ({ recipientEmail, senderEmail }) => {
     try {
-        console.log("rcemail", recipientEmail);
         await chat_1.default.updateMany({ recipientEmail, senderEmail }, { $set: { status: "delivered" } });
     }
     catch (error) {
