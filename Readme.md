@@ -279,11 +279,11 @@ Frontend `.env`:
 
 Create a `.env` file in the client root.
 
-```
+
 
 NEXT_PUBLIC_SERVER_URL=http://localhost:3001
 
-```
+
 
 ---
 
