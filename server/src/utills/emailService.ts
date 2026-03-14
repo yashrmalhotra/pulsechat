@@ -1,7 +1,5 @@
-import mongoose from "mongoose"
-import nodemailer from "nodemailer"
-import User from "../models/user"
-import {Resend} from "resend"
+
+import axios, { AxiosError } from "axios"
 // --------------- FOR LOCAL OR DOCKER ---------------
 // const transporter = nodemailer.createTransport({
 //   host: "smtp.gmail.com",
@@ -13,8 +11,6 @@ import {Resend} from "resend"
 //   },
 // })
 
-// --------------- FOR PRODUCTION ---------------
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendMail = async (email: string, code: string) => {
    // ---------------FOR LOCAL OR DOCKER---------------
@@ -33,16 +29,26 @@ export const sendMail = async (email: string, code: string) => {
   // }
 
   // --------------- FOR PRODUCTION ---------------
-  const { error } = await resend.emails.send({
-    from: process.env.EMAIL!,
-    to: email,
-    subject: "PulseChat - Verification mail",
-    html: `<p>Please click on the link <a href=${process.env.CLIENT_URL}/verify/${code} style="color:blue; text-decoration: underline; font-weight:bold;">Click here to verify</a>`,
-  });
-  if(error){
-    console.log("error of email",error)
-    throw new Error(error.message)
+  try {
+    const res = await axios.post("https://api.brevo.com/v3/smtp/email",{
+      sender:{
+        name:"PulseChat",
+        email: process.env.EMAIL,
+      },
+      to:[{email}],
+      subject:"Verification Email",
+      htmlContent:`<p>Please click on the link <a href=${process.env.CLIENT_URL}/verify/${code} style="color:blue; text-decoration: underline; font-weight:bold;">Click here to verify</a>`,
+    },
+    {
+      headers:{
+        "api-key":process.env.BREVO_API_KEY,
+        "Content-Type":"application/json"
+      }
+    }
+  )
+  console.log("email res",res.data)
+  } catch (error:any | AxiosError) {
+    console.log(error?.response?.data)
   }
-
 
 }
