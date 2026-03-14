@@ -258,6 +258,7 @@ const getOauthUser = async (req, res) => {
         res.json({ user });
     }
     catch (error) {
+        console.log("eror", error);
         res.status(500).send("error");
     }
 };

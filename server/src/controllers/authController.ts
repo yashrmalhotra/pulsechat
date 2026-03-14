@@ -265,6 +265,7 @@ export const getOauthUser = async (req:Request,res:Response)=>{
     res.json({user})
 
   } catch (error) {
+    console.log("eror",error)
     res.status(500).send("error")
   }
 }
