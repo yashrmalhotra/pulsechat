@@ -247,7 +247,7 @@ pulsechat/
 
 # 🔐 Environment Variables
 
-Create a `.env` file in the backend root.
+Create a `.env` file in the server root.
 
 ```
 # Server
@@ -276,6 +276,8 @@ CALLBACK_URL=oauth_callback_url
 
 
 Frontend `.env`:
+
+Create a `.env` file in the client root.
 
 ```
 
