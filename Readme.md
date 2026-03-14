@@ -5,6 +5,17 @@ It supports instant messaging, delivery and read receipts, voice/video calls, an
 
 The system is designed to demonstrate **modern backend architecture**, including streaming pipelines, caching, presence systems, and containerized development.
 
+# Test Credentials
+
+email1 - temp.user1@gmail.com
+
+password - asdf1234
+
+email1 - temp.user2@gmail.com
+
+password - asdf1234
+
+
 ---
 
 # 🚀 Features
@@ -267,7 +278,9 @@ CALLBACK_URL=oauth_callback_url
 Frontend `.env`:
 
 ```
+
 NEXT_PUBLIC_SERVER_URL=http://localhost:3001
+
 ```
 
 ---
@@ -318,16 +331,6 @@ This project demonstrates:
 * Scalable chat backend
 
 ---
-
-# Test Credentials
-
-email1 - temp.user1@gmail.com
-
-password - asdf1234
-
-email1 - temp.user2@gmail.com
-
-password - asdf1234
 
 
 
