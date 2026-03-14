@@ -119,7 +119,7 @@ const Calllogs = () => {
             <div>No Recent Calls</div>
           ) : (
             recentCallList?.map((recentCall, i) => (
-              <li key={i} className="flex w-full justify-between items-center">
+              <li key={i} className="flex w-full justify-between items-center px-3 md:px-0">
                 <Box
                   sx={{
                     width: "100%",

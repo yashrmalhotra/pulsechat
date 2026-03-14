@@ -249,7 +249,7 @@ const ChatWindow = () => {
   }, [recipientDetails])
   const handleSend = () => {
     const dateObj = new Date()
-    const time = dateObj.toLocaleTimeString([], {
+    const time = dateObj.toLocaleTimeString("en-IN", {
       hour: "2-digit",
       minute: "2-digit",
     })
