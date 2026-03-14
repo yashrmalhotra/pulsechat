@@ -3,20 +3,24 @@ import { Button } from "@mui/material"
 import React, { useEffect, useState } from "react"
 import { FcGoogle } from "react-icons/fc"
 import { Dialog, Typography, CircularProgress } from "@mui/material"
-import { useParams } from "next/navigation"
+import { useParams, useSearchParams } from "next/navigation"
 import { useAuth } from "../context/AuthContextProvider"
 import axios from "axios"
+import { useRouter } from "next/router"
+import { SearchParamsContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime"
 const GoogleAuth = () => {
   const [isError, setIsError] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const {setUser} = useAuth()!
-  const params = useParams()
+  const query = useSearchParams()
+  
   useEffect(()=>{
-
     (
      async ()=>{
-       if(!params.token) return
-      const token = decodeURI(params.token as string)
+      const params = query.get("token")
+       if(!params) return
+      const token = decodeURI(params)
+      console.log(token)
       try {
         setIsLoading(true)
         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{

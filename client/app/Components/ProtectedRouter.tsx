@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 const ProtectedRouter: React.FC<ReactNodeProps> = ({ children }) => {
   const { isAuthLoading, isAuthenticated} = useAuth()!
   const router = useRouter()
+  
   useEffect(() => {
     
     if (!isAuthenticated && !isAuthLoading) {

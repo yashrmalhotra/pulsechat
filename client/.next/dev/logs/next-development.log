@@ -1,6 +1,2388 @@
-[00:00:06.318] Server  LOG      ✓ Ready in 4.6s
-[00:00:21.268] Server  LOG      ○ Compiling /signup ...
-[00:00:44.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:48.636] Server  ERROR   (node:11204) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+[00:00:10.765] Server  LOG      ✓ Ready in 8s
+[00:00:19.964] Server  LOG      ○ Compiling / ...
+[00:01:08.589] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:10.673] Server  ERROR   (node:19060) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[00:10:15.061] Browser LOG     error User already exist
+[00:01:28.411] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:35.012] Server  LOG      ✓ Compiled in 763ms
+[00:02:35.527] Server  LOG      ✓ Compiled in 273ms
+[00:02:35.977] Server  LOG      ✓ Compiled in 332ms
+[00:02:36.666] Server  LOG      ✓ Compiled in 325ms
+[00:02:36.780] Server  LOG      ✓ Compiled in 197ms
+[00:02:38.149] Server  LOG      ✓ Compiled in 918ms
+[00:02:39.594] Server  LOG      ✓ Compiled in 440ms
+[00:02:42.296] Server  LOG      ✓ Compiled in 501ms
+[00:02:42.670] Server  LOG      ✓ Compiled in 258ms
+[00:02:44.764] Server  LOG      ✓ Compiled in 496ms
+[00:02:45.584] Server  LOG      ✓ Compiled in 233ms
+[00:02:46.152] Server  LOG      ✓ Compiled in 243ms
+[00:02:47.683] Server  LOG      ✓ Compiled in 379ms
+[00:02:48.758] Server  LOG      ✓ Compiled in 292ms
+[00:02:49.400] Server  LOG      ✓ Compiled in 222ms
+[00:02:49.572] Server  LOG      ✓ Compiled in 176ms
+[00:02:49.925] Server  LOG      ✓ Compiled in 201ms
+[00:02:50.396] Server  LOG      ✓ Compiled in 160ms
+[00:02:54.447] Server  LOG      ✓ Compiled in 363ms
+[00:02:55.071] Server  LOG      ✓ Compiled in 195ms
+[00:02:55.714] Server  LOG      ✓ Compiled in 263ms
+[00:02:55.863] Server  LOG      ✓ Compiled in 195ms
+[00:02:56.144] Browser ERROR   unhandledRejection: ReferenceError: c is not defined
+[00:02:56.144] Browser ERROR   unhandledRejection: ReferenceError: co is not defined
+[00:02:56.144] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const 
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:02:56.144] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const to
+     |             ^^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:02:56.144] Browser ERROR   unhandledRejection: ReferenceError: con is not defined
+[00:02:56.144] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const toke
+     |             ^^^^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:02:56.145] Browser ERROR   unhandledRejection: ReferenceError: cons is not defined
+[00:02:56.145] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const tok
+     |             ^^^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:02:56.145] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:02:56.145] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:26
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       console.
+> 20 |        if(!params.token) return
+     |                          ^^^^^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:02:56.145] Browser ERROR   unhandledRejection: ReferenceError: cons is not defined
+[00:02:56.145] Browser LOG     
+[00:02:56.145] Browser LOG     
+[00:02:56.145] Browser LOG     t
+[00:02:56.145] Browser ERROR   unhandledRejection: ReferenceError: conso is not defined
+[00:02:56.145] Browser LOG     to
+[00:02:56.145] Browser LOG     toke
+[00:02:56.145] Browser LOG     token
+[00:02:57.525] Browser LOG     token {}
+[00:02:57.526] Browser ERROR   unhandledRejection: ReferenceError: pa is not defined
+[00:02:57.526] Browser ERROR   unhandledRejection: ReferenceError: par is not defined
+[00:02:57.526] Browser ERROR   unhandledRejection: ReferenceError: para is not defined
+[00:03:06.720] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:08.503] Browser LOG     token {}
+[00:06:17.310] Server  LOG      ✓ Compiled in 7.5s
+[00:06:26.464] Server  LOG      ✓ Compiled in 329ms
+[00:06:28.329] Server  LOG      ✓ Compiled in 698ms
+[00:06:29.426] Server  LOG      ✓ Compiled in 876ms
+[00:06:42.792] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:42.833] Browser ERROR   uncaughtError: ReferenceError: useS is not defined
+[00:06:42.970] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:43.095] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:46.032] Browser ERROR   uncaughtError: ReferenceError: useSe is not defined
+[00:06:46.032] Browser ERROR   uncaughtError: ReferenceError: useSearchParams is not defined
+[00:06:46.032] Browser LOG     token {}
+[00:08:06.206] Server  LOG      ✓ Compiled in 700ms
+[00:08:06.211] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:07.095] Server  LOG      ✓ Compiled in 420ms
+[00:08:07.187] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:07.408] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:08.093] Server  LOG      ✓ Compiled in 227ms
+[00:08:08.745] Server  LOG      ✓ Compiled in 397ms
+[00:08:09.059] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:09.060] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:09.100] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:10.664] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:10.664] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:10.807] Server  LOG      ✓ Compiled in 929ms
+[00:08:11.164] Browser ERROR   ./app/Components/GoogleAuth.tsx:14:9
+Parsing ecmascript source code failed
+  12 |   const [isLoading, setIsLoading] = useState<boolean>(false)
+  13 |   const {setUser} = useAuth()!
+> 14 |   const <search></search> = useSearchParams()
+     |         ^
+  15 |   
+  16 |   useEffect(()=>{
+  17 |     (
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:12.198] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:12.221] Server  LOG      ✓ Compiled in 136ms
+[00:08:13.329] Server  LOG      ✓ Compiled in 188ms
+[00:08:13.565] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:13.584] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:13.753] Server  LOG      ✓ Compiled in 355ms
+[00:08:14.454] Server  LOG      ✓ Compiled in 368ms
+[00:08:14.729] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:15.655] Server  LOG      ✓ Compiled in 258ms
+[00:08:16.256] Server  LOG      ✓ Compiled in 344ms
+[00:08:17.177] Server  LOG      ✓ Compiled in 340ms
+[00:08:17.609] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:17.913] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:18.020] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:18.270] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:20.679] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:20.679] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:20.679] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:20.679] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:20.679] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:20.679] Browser ERROR   unhandledRejection: ReferenceError: params is not defined
+[00:08:32.731] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:32.756] Server  LOG      ✓ Compiled in 181ms
+[00:08:33.194] Server  LOG      ✓ Compiled in 196ms
+[00:08:33.696] Server  LOG      ✓ Compiled in 277ms
+[00:08:34.583] Server  LOG      ✓ Compiled in 424ms
+[00:08:35.058] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:35.146] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:36.022] Server  LOG      ✓ Compiled in 223ms
+[00:08:36.167] Browser ERROR   unhandledRejection: ReferenceError: c is not defined
+[00:08:36.167] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const 
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:36.167] Browser ERROR   unhandledRejection: ReferenceError: co is not defined
+[00:08:36.167] Browser ERROR   unhandledRejection: ReferenceError: cons is not defined
+[00:08:38.680] Server  LOG      ✓ Compiled in 937ms
+[00:08:38.871] Server  LOG      ✓ Compiled in 342ms
+[00:08:39.496] Server  LOG      ✓ Compiled in 198ms
+[00:08:39.877] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const p
+     |             ^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:39.877] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const pa
+     |             ^^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:39.981] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:40.430] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:40.569] Server  LOG      ✓ Compiled in 168ms
+[00:08:41.823] Server  LOG      ✓ Compiled in 631ms
+[00:08:43.061] Server  LOG      ✓ Compiled in 244ms
+[00:08:44.640] Server  LOG      ✓ Compiled in 839ms
+[00:08:45.654] Server  LOG      ✓ Compiled in 339ms
+[00:08:46.715] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:48.242] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const 
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   unhandledRejection: ReferenceError: cons is not defined
+[00:08:48.243] Browser ERROR   unhandledRejection: ReferenceError: con is not defined
+[00:08:48.243] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const 
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const t
+     |             ^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const to
+     |             ^^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const 
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const p
+     |             ^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const pa
+     |             ^^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:48.243] Browser ERROR   unhandledRejection: ReferenceError: cons is not defined
+[00:08:48.252] Server  LOG      ✓ Compiled in 285ms
+[00:08:49.163] Browser ERROR   ./app/Components/GoogleAuth.tsx:19:13
+Parsing ecmascript source code failed
+  17 |     (
+  18 |      async ()=>{
+> 19 |       const p
+     |             ^
+  20 |        if(!params.token) return
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:49.163] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:8
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const 
+> 20 |        if(!params.token) return
+     |        ^^
+  21 |       const token = decodeURI(params.token as string)
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:08:59.686] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:7
+Parsing ecmascript source code failed
+  18 |      async ()=>{
+  19 |       const 
+> 20 |       const token = decodeURI(params.token as string)
+     |       ^^^^^
+  21 |        if(!params.token) return
+  22 |       try {
+  23 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:00.387] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(params.token as string)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:11.300] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(s)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:11.300] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(se)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:12.809] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(sea)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:13.160] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(searc)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:16.395] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(search)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:16.395] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(searchP)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:09:21.046] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI(SearchParamsContex)
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:10:03.760] Server  LOG      ✓ Compiled in 453ms
+[00:10:08.468] Server  LOG      ✓ Compiled in 121ms
+[00:10:26.083] Server  LOG      ✓ Compiled in 917ms
+[00:10:27.502] Server  LOG      ✓ Compiled in 292ms
+[00:10:28.243] Server  LOG      ✓ Compiled in 292ms
+[00:10:48.305] Server  LOG      ✓ Compiled in 287ms
+[00:10:49.941] Server  LOG      ✓ Compiled in 347ms
+[00:11:57.823] Server  LOG      ✓ Compiled in 885ms
+[00:11:58.185] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:11:59.636] Server  LOG      ✓ Compiled in 678ms
+[00:12:00.396] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:17.191] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |        const token = decodeURI()
+  20 |       const 
+> 21 |        if(!params.token) return
+     |        ^^
+  22 |       try {
+  23 |         setIsLoading(true)
+  24 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.192] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(s)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(se)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(se)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(sea)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:45
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |        const token = decodeURI(searchParams.)
+     |                                             ^
+  21 |       const 
+  22 |        if(!params.token) return
+  23 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.ge)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get())
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get(""))
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get("to"))
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get("too"))
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get("tooke"))
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get("tooken"))
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get("token"))
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:57
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |        const token = decodeURI(searchParams.get("token")a)
+     |                                                         ^
+  21 |       const 
+  22 |        if(!params.token) return
+  23 |       try {
+
+Expected ',', got 'a'
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:57
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |        const token = decodeURI(searchParams.get("token")a!)
+     |                                                         ^
+  21 |       const 
+  22 |        if(!params.token) return
+  23 |       try {
+
+Expected ',', got 'a'
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get("token")!)
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI(searchParams.get("token"))
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |        const token = decodeURI()
+  21 |       const 
+> 22 |        if(!params.token) return
+     |        ^^
+  23 |       try {
+  24 |         setIsLoading(true)
+  25 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI()
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI()
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI()
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |      async ()=>{
+  20 |       const
+> 21 |        const token = decodeURI()
+     |        ^^^^^
+  22 |       const 
+  23 |        if(!params.token) return
+  24 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |      async ()=>{
+  20 |       const 
+> 21 |        const token = decodeURI()
+     |        ^^^^^
+  22 |       const 
+  23 |        if(!params.token) return
+  24 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const to
+     |             ^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const t
+     |             ^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |      async ()=>{
+  20 |       const 
+> 21 |        const token = decodeURI()
+     |        ^^^^^
+  22 |       const 
+  23 |        if(!params.token) return
+  24 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const q
+     |             ^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const qu
+     |             ^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.196] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const que
+     |             ^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const quer
+     |             ^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query 
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const query
+     |             ^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const pa
+     |             ^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const para
+     |             ^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.197] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const params
+     |             ^^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.198] Browser ERROR   ./app/Components/GoogleAuth.tsx:20:13
+Parsing ecmascript source code failed
+  18 |     (
+  19 |      async ()=>{
+> 20 |       const params 
+     |             ^^^^^^
+  21 |        const token = decodeURI()
+  22 |       const 
+  23 |        if(!params.token) return
+
+'const' declarations must be initialized
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.199] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |      async ()=>{
+  20 |       const params =
+> 21 |        const token = decodeURI()
+     |        ^^^^^
+  22 |       const 
+  23 |        if(!params.token) return
+  24 |       try {
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.199] Browser ERROR   ./app/Components/GoogleAuth.tsx:21:8
+Parsing ecmascript source code failed
+  19 |      async ()=>{
+  20 |       const params = 
+> 21 |        const token = decodeURI()
+     |        ^^^^^
+  22 |       const 
+  23 |        if(!params.token) return
+  24 |       try {
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.199] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI()
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI()
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI()
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI()
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:23:8
+Parsing ecmascript source code failed
+  21 |        const token = decodeURI(params)
+  22 |       const 
+> 23 |        if(!params.token) return
+     |        ^^
+  24 |       try {
+  25 |         setIsLoading(true)
+  26 |         const {data} = await axios.get(`/api/auth/getoauthuser?token${token}`,{
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       try {
+  25 |         setIsLoading(true)
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       co
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       conso
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.l
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.lo
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.log
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.log()
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.log(to)
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.log(toke)
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.log(token)
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser ERROR   ./app/Components/GoogleAuth.tsx:22:8
+Parsing ecmascript source code failed
+  20 |       const params = query.get("token")
+  21 |       const 
+> 22 |        if(!params) return
+     |        ^^
+  23 |       const token = decodeURI(params)
+  24 |       console.log(token)
+  25 |       try {
+
+Expected ident
+
+Import traces:
+  Client Component Browser:
+    ./app/Components/GoogleAuth.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Client Component Browser]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/Components/GoogleAuth.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Client Component SSR]
+    ./app/Components/SignInForm.tsx [Server Component]
+    ./app/signin/page.tsx [Server Component]
+[00:12:17.200] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM0OTg4MTcsImV4cCI6MTc3MzU4NTIxN30.rqKc8g8CYxP98pjxuE30g84UtD-PP2APJdH2G3KtG5Mtoken
+[00:12:17.200] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM0OTg4MTcsImV4cCI6MTc3MzU4NTIxN30.rqKc8g8CYxP98pjxuE30g84UtD-PP2APJdH2G3KtG5Mtoken
+[00:12:31.307] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:32.414] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM0OTg4MTcsImV4cCI6MTc3MzU4NTIxN30.rqKc8g8CYxP98pjxuE30g84UtD-PP2APJdH2G3KtG5Mtoken
