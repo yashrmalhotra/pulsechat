@@ -17,7 +17,7 @@ const SignInForm = () => {
   const [passwordVisible, setPasswordVisible ] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const router = useRouter()
-  const { setUser, isAuthenticated, user,setIsAuthenticated} = useAuth()!
+  const { setUser, isAuthenticated, user,setIsAuthenticated,isAuthLoading} = useAuth()!
   const {
     register,
     handleSubmit,
