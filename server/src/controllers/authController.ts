@@ -146,7 +146,7 @@ export const signIn = async (req: Request, res: Response) => {
         res.cookie("token", token, {
           maxAge: 1000 * 3600 * 24,
           httpOnly: true,
-          domain: process.env.DOMAIN,
+          sameSite:"none",
           path: "/",
           secure: true,
         })
@@ -176,7 +176,8 @@ export const googleAuthCallback = async (req: Request, res: Response) => {
   res.cookie("token", token, {
     maxAge: 1000 * 3600 * 24,
     httpOnly: true,
-    domain: process.env.DOMAIN,
+    // domain: process.env.DOMAIN,
+    sameSite:"none",
     path: "/",
     secure: true,
   })
@@ -250,7 +251,7 @@ export const logOut = async (req: Request, res: Response) => {
   res
     .clearCookie("token", {
       httpOnly: true,
-      domain: process.env.DOMAIN,
+         sameSite:"none",
       path: "/",
       secure: true,
     })

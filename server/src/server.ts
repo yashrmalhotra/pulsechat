@@ -21,6 +21,7 @@ import { connectConsumer, consumer } from "./kafka/consumer"
 import setUpShutDown from "./kafka/shutdown"
 
 const app = express()
+app.set("trust proxy",1)
 export const client = new Redis(process.env.REDIS_URL!)
 client.on("connect", () => console.log("redis connected"))
 const server = http.createServer(app)

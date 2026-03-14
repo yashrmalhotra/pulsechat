@@ -22,6 +22,7 @@ const producer_1 = require("./kafka/producer");
 const consumer_1 = require("./kafka/consumer");
 const shutdown_1 = __importDefault(require("./kafka/shutdown"));
 const app = (0, express_1.default)();
+app.set("trust proxy", 1);
 exports.client = new ioredis_1.default(process.env.REDIS_URL);
 exports.client.on("connect", () => console.log("redis connected"));
 const server = http_1.default.createServer(app);
