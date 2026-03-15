@@ -341,7 +341,7 @@ const CallAction = ({ isVideoCallDial, setIsVideoCall })=>{
                                 lineNumber: 243,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
-                            true && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
+                            isVideoCall && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
                                 onClick: ()=>setIsCameraOn(!isCameraOn),
                                 sx: {
                                     width: 48,
@@ -353,23 +353,20 @@ const CallAction = ({ isVideoCallDial, setIsVideoCall })=>{
                                     background: isCameraOn ? "white" : "rgba(255,255,255,0.08)",
                                     color: isCameraOn ? "black" : "white"
                                 },
-                                children: [
-                                    " ",
-                                    isCameraOn ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaVideo"], {
-                                        size: 18
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/Components/CallAction.tsx",
-                                        lineNumber: 275,
-                                        columnNumber: 21
-                                    }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaVideoSlash"], {
-                                        size: 18
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/Components/CallAction.tsx",
-                                        lineNumber: 277,
-                                        columnNumber: 21
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
+                                children: isCameraOn ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaVideo"], {
+                                    size: 18
+                                }, void 0, false, {
+                                    fileName: "[project]/app/Components/CallAction.tsx",
+                                    lineNumber: 275,
+                                    columnNumber: 21
+                                }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaVideoSlash"], {
+                                    size: 18
+                                }, void 0, false, {
+                                    fileName: "[project]/app/Components/CallAction.tsx",
+                                    lineNumber: 277,
+                                    columnNumber: 21
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
                                 fileName: "[project]/app/Components/CallAction.tsx",
                                 lineNumber: 259,
                                 columnNumber: 17
@@ -903,7 +900,7 @@ const ChatWindow = ()=>{
     ]);
     const handleSend = ()=>{
         const dateObj = new Date();
-        const time = dateObj.toLocaleTimeString([], {
+        const time = dateObj.toLocaleTimeString("en-IN", {
             hour: "2-digit",
             minute: "2-digit"
         });
@@ -1460,12 +1457,12 @@ const ProtectedRouter = ({ children })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/app/Components/ProtectedRouter.tsx",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/app/Components/ProtectedRouter.tsx",
-            lineNumber: 19,
+            lineNumber: 20,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     }

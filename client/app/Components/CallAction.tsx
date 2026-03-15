@@ -255,7 +255,7 @@ const isVoiceCall =
               >
                 {!isUnMute ? <BsMicMuteFill size={18} /> : <BsMicFill size={18} />}
               </Button>
-              {true && (
+              {isVideoCall && (
                 <Button
                   onClick={() => setIsCameraOn(!isCameraOn)}
                   sx={{
@@ -270,7 +270,7 @@ const isVoiceCall =
                     color: isCameraOn ? "black" : "white",
                   }}
                 >
-                  {" "}
+                  
                   {isCameraOn ? (
                     <FaVideo size={18} />
                   ) : (

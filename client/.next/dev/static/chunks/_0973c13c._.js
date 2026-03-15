@@ -139,7 +139,7 @@ const GoogleAuthComponent = ()=>{
     _s();
     const [isError, setIsError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const { setUser } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+    const { setUser, setIsAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const query = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchParams"])();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleAuthComponent.useEffect": ()=>{
@@ -154,6 +154,7 @@ const GoogleAuthComponent = ()=>{
                             withCredentials: true
                         });
                         setUser(data.user);
+                        setIsAuthenticated(true);
                     } catch (error) {
                         setIsError(true);
                     } finally{
@@ -186,12 +187,12 @@ const GoogleAuthComponent = ()=>{
                     children: "Something went wrong!"
                 }, void 0, false, {
                     fileName: "[project]/app/Components/GoogleAuth.tsx",
-                    lineNumber: 57,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/Components/GoogleAuth.tsx",
-                lineNumber: 45,
+                lineNumber: 43,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -218,7 +219,7 @@ const GoogleAuthComponent = ()=>{
                     }
                 }, void 0, false, {
                     fileName: "[project]/app/Components/GoogleAuth.tsx",
-                    lineNumber: 81,
+                    lineNumber: 79,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                     children: [
@@ -227,7 +228,7 @@ const GoogleAuthComponent = ()=>{
                             size: 22
                         }, void 0, false, {
                             fileName: "[project]/app/Components/GoogleAuth.tsx",
-                            lineNumber: 85,
+                            lineNumber: 83,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         " ",
@@ -236,7 +237,7 @@ const GoogleAuthComponent = ()=>{
                             children: "Continue with google"
                         }, void 0, false, {
                             fileName: "[project]/app/Components/GoogleAuth.tsx",
-                            lineNumber: 86,
+                            lineNumber: 84,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         " "
@@ -244,13 +245,13 @@ const GoogleAuthComponent = ()=>{
                 }, void 0, true)
             }, void 0, false, {
                 fileName: "[project]/app/Components/GoogleAuth.tsx",
-                lineNumber: 62,
+                lineNumber: 60,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true);
 };
-_s(GoogleAuthComponent, "Q8172fG3bLHJ2rg11z35YEtbG3M=", false, function() {
+_s(GoogleAuthComponent, "babN9ClMDE88pDlbasTlu3dvyWQ=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchParams"]
@@ -262,12 +263,12 @@ const GoogleAuth = ()=>{
         fallback: null,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(GoogleAuthComponent, {}, void 0, false, {
             fileName: "[project]/app/Components/GoogleAuth.tsx",
-            lineNumber: 95,
+            lineNumber: 93,
             columnNumber: 5
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/Components/GoogleAuth.tsx",
-        lineNumber: 94,
+        lineNumber: 92,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -322,7 +323,7 @@ const SignInForm = ()=>{
     const [passwordVisible, setPasswordVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    const { setUser, isAuthenticated, user, setIsAuthenticated } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
+    const { setUser, isAuthenticated, user, setIsAuthenticated, isAuthLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const { register, handleSubmit, setError, formState: { errors } } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"])({
         defaultValues: {
             identifier: "",
@@ -351,7 +352,6 @@ const SignInForm = ()=>{
             });
             setUser(res.data);
             setIsAuthenticated(true);
-            router.replace("/");
         } catch (error) {
             setError("root", {
                 type: "axios",
@@ -364,6 +364,25 @@ const SignInForm = ()=>{
     const onSubmit = ()=>{
         handleSubmit(submit)();
     };
+    if (isAuthLoading) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex w-full h-screen justify-center items-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$CircularProgress$2f$CircularProgress$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CircularProgress$3e$__["CircularProgress"], {
+                size: 35,
+                sx: {
+                    color: "#cc00ff"
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/Components/SignInForm.tsx",
+                lineNumber: 62,
+                columnNumber: 11
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/app/Components/SignInForm.tsx",
+            lineNumber: 61,
+            columnNumber: 9
+        }, ("TURBOPACK compile-time value", void 0));
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-screen flex justify-center items-center bg-blue-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -377,7 +396,7 @@ const SignInForm = ()=>{
                     error: errors.identifier?.message
                 }, void 0, false, {
                     fileName: "[project]/app/Components/SignInForm.tsx",
-                    lineNumber: 63,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -392,13 +411,13 @@ const SignInForm = ()=>{
                                     children: "*"
                                 }, void 0, false, {
                                     fileName: "[project]/app/Components/SignInForm.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 83,
                                     columnNumber: 22
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 71,
+                            lineNumber: 82,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -412,7 +431,7 @@ const SignInForm = ()=>{
                                     autoComplete: "off"
                                 }, void 0, false, {
                                     fileName: "[project]/app/Components/SignInForm.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 86,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$IconButton$2f$IconButton$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconButton$3e$__["IconButton"], {
@@ -426,25 +445,25 @@ const SignInForm = ()=>{
                                         size: 25
                                     }, void 0, false, {
                                         fileName: "[project]/app/Components/SignInForm.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 102,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$io$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["IoIosEye"], {
                                         color: "#f5e6ff",
                                         size: 25
                                     }, void 0, false, {
                                         fileName: "[project]/app/Components/SignInForm.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 104,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/app/Components/SignInForm.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 94,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 74,
+                            lineNumber: 85,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         errors.password && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -452,13 +471,13 @@ const SignInForm = ()=>{
                             children: errors.password.message
                         }, void 0, false, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 98,
+                            lineNumber: 109,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/Components/SignInForm.tsx",
-                    lineNumber: 70,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -484,18 +503,18 @@ const SignInForm = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/Components/SignInForm.tsx",
-                        lineNumber: 121,
+                        lineNumber: 132,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "[project]/app/Components/SignInForm.tsx",
-                        lineNumber: 123,
+                        lineNumber: 134,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/app/Components/SignInForm.tsx",
-                    lineNumber: 103,
+                    lineNumber: 114,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 errors.root && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -503,7 +522,7 @@ const SignInForm = ()=>{
                     children: errors.root.message
                 }, void 0, false, {
                     fileName: "[project]/app/Components/SignInForm.tsx",
-                    lineNumber: 127,
+                    lineNumber: 138,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -513,7 +532,7 @@ const SignInForm = ()=>{
                             children: "Don't have an account?"
                         }, void 0, false, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 130,
+                            lineNumber: 141,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         " ",
@@ -523,13 +542,13 @@ const SignInForm = ()=>{
                             children: "Sign Up"
                         }, void 0, false, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 131,
+                            lineNumber: 142,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/Components/SignInForm.tsx",
-                    lineNumber: 129,
+                    lineNumber: 140,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -539,7 +558,7 @@ const SignInForm = ()=>{
                             className: "grow border-t border-gray-300"
                         }, void 0, false, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 137,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -547,40 +566,40 @@ const SignInForm = ()=>{
                             children: "OR"
                         }, void 0, false, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 138,
+                            lineNumber: 149,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grow border-t border-gray-300"
                         }, void 0, false, {
                             fileName: "[project]/app/Components/SignInForm.tsx",
-                            lineNumber: 139,
+                            lineNumber: 150,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/Components/SignInForm.tsx",
-                    lineNumber: 136,
+                    lineNumber: 147,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$Components$2f$GoogleAuth$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/Components/SignInForm.tsx",
-                    lineNumber: 142,
+                    lineNumber: 153,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/Components/SignInForm.tsx",
-            lineNumber: 62,
+            lineNumber: 73,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/Components/SignInForm.tsx",
-        lineNumber: 61,
+        lineNumber: 72,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(SignInForm, "biMDHu92ARkMl6eqHGbVqBIvvRM=", false, function() {
+_s(SignInForm, "rViUS74HmFVdFHsUItj3Gbej4aA=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
         __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$context$2f$AuthContextProvider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"],

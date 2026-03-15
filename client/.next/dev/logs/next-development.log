@@ -1,37 +1,112 @@
-[00:00:12.809] Server  LOG      ✓ Ready in 9.7s
-[00:00:32.932] Server  LOG      ○ Compiling /signin ...
-[00:01:00.686] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:01.843] Server  ERROR   (node:10416) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+[00:00:07.608] Server  LOG      ✓ Ready in 5.7s
+[00:01:24.069] Server  LOG      ○ Compiling /signin ...
+[00:01:49.412] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:50.275] Server  ERROR   (node:2532) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[00:01:02.532] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM1MDI2NzksImV4cCI6MTc3MzU4OTA3OX0.bs23qGHBl8SAmNyIbxkMx72mGYfsVuHrP9w3fdhN4UA
-[00:01:26.023] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:28.878] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM1MDI2NzksImV4cCI6MTc3MzU4OTA3OX0.bs23qGHBl8SAmNyIbxkMx72mGYfsVuHrP9w3fdhN4UA
-[00:01:33.704] Server  LOG      ○ Compiling / ...
-[00:02:42.105] Server  ERROR   Failed to proxy http://localhost:3001/api/chat?email=undefined AggregateError
-[00:02:42.111] Server  ERROR   AggregateError
-[00:02:42.151] Server  ERROR   Failed to proxy http://localhost:3001/api/call?email=undefined AggregateError
-[00:02:42.159] Server  ERROR   AggregateError
-[00:02:45.251] Server  LOG      ○ Compiling /_error ...
-[00:02:47.956] Browser ERROR   unhandledRejection: AxiosError: Request failed with status code 500
-[00:02:47.956] Browser ERROR   unhandledRejection: AxiosError: Request failed with status code 500
-[00:04:28.700] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:29.274] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/getUser AggregateError
-[00:04:29.282] Server  ERROR   AggregateError
-[00:04:29.347] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/getoauthuser?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM0OTg4MTcsImV4cCI6MTc3MzU4NTIxN30.rqKc8g8CYxP98pjxuE30g84UtD-PP2APJdH2G3KtG5Mtoken AggregateError
-[00:04:29.366] Server  ERROR   AggregateError
-[00:04:29.457] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM0OTg4MTcsImV4cCI6MTc3MzU4NTIxN30.rqKc8g8CYxP98pjxuE30g84UtD-PP2APJdH2G3KtG5Mtoken
-[00:11:29.184] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:11:32.473] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM1MDMzODYsImV4cCI6MTc3MzU4OTc4Nn0.mSLm2cHq9vuNkvlzLYQHzllOIGYoHema4hl51YsqtJI
-[00:14:24.182] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:14:26.344] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM1MDMzODYsImV4cCI6MTc3MzU4OTc4Nn0.mSLm2cHq9vuNkvlzLYQHzllOIGYoHema4hl51YsqtJI
-[00:20:39.158] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:20:52.646] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:20:53.347] Browser ERROR   unhandledRejection: Error: Failed to load chunk /_next/static/chunks/node_modules_next_dist_client_components_builtin_global-error_78cdd4a3.js from module [project]/node_modules/next/dist/compiled/react-server-dom-turbopack/cjs/react-server-dom-turbopack-client.browser.development.js [app-client] (ecmascript)
-[00:20:53.347] Browser ERROR   unhandledRejection: Error: Failed to load chunk /_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_f26f265a._.js from module [turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript, async loader)
-[00:20:54.216] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:23:45.553] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:23:46.744] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/getUser AggregateError
-[00:23:46.752] Server  ERROR   AggregateError
-[00:24:22.473] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:24:24.444] Browser LOG     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzM1MDQyNDgsImV4cCI6MTc3MzU5MDY0OH0.6mFGK8rF4fUgb6LIYe7kYDhM3ERoz7rfKmXd9HJB3lU
-[00:28:52.776] Server  LOG      ✓ Compiled in 3.9s
+[00:01:55.873] Server  LOG      ○ Compiling / ...
+[00:02:35.380] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:18.334] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:36.155] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/signin Error: socket hang up
+[00:03:36.168] Server  ERROR   Error: socket hang up
+[00:03:39.253] Server  LOG      ○ Compiling /_error ...
+[00:03:49.298] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/getUser Error: socket hang up
+[00:03:49.309] Server  ERROR   Error: socket hang up
+[00:04:10.472] Server  ERROR   Failed to proxy http://localhost:3001/api/auth/signin Error: read ECONNRESET
+[00:04:10.482] Server  ERROR   Error: read ECONNRESET
+[00:08:34.172] Server  LOG      ○ Compiling /chat/[userid] ...
+[00:09:07.394] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <p> p 
+
+  ...
+    <SegmentViewNode type="page" pagePath="chat/[user...">
+      <SegmentTrieNode>
+      <page>
+        <ProtectedRouter>
+          <main className="h-[92vh] m...">
+            <SideBar>
+            <ChatWindow>
+              <div className="flex flex-...">
+                <nav>
+                <div>
+                <div>
+                <CallAction isVideoCallDial={false} setIsVideoCall={function bound dispatchSetState}>
+                  <Box sx={{height:"100%", ...}}>
+                    <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} sx={{height:"100%", ...}}>
+                      <Insertion>
+                      <div className="MuiBox-roo...">
+                        <div>
+                        <audio>
+                        <div>
+                        <Box sx={{...}}>
+                          <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} sx={{...}}>
+                            <Insertion>
+                            <div className="MuiBox-roo...">
+                              <Typography sx={{color:"white", ...}}>
+                                <MuiTypography-root as="p" ref={null} className="MuiTypogra..." sx={{color:"white", ...}} ...>
+                                  <Insertion>
+>                                 <p
+>                                   className="MuiTypography-root MuiTypography-body1 css-55cb9p-MuiTypography-root"
+>                                   style={{}}
+>                                 >
+                                    <IoCall>
+                                    <Typography>
+                                      <MuiTypography-root as="p" ref={null} className="MuiTypogra..." sx={{...}} ...>
+                                        <Insertion>
+>                                       <p
+>                                         className="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+>                                         style={{}}
+>                                       >
+                        ...
+    ...
+
+[00:09:07.394] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. p <p>
+[00:09:14.976] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <p> p 
+
+  ...
+    <SegmentViewNode type="page" pagePath="chat/[user...">
+      <SegmentTrieNode>
+      <page>
+        <ProtectedRouter>
+          <main className="h-[92vh] m...">
+            <SideBar>
+            <ChatWindow>
+              <div className="flex flex-...">
+                <nav>
+                <div>
+                <div>
+                <CallAction isVideoCallDial={false} setIsVideoCall={function bound dispatchSetState}>
+                  <Box sx={{height:"100%", ...}}>
+                    <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} sx={{height:"100%", ...}}>
+                      <Insertion>
+                      <div className="MuiBox-roo...">
+                        <div>
+                        <audio>
+                        <div>
+                        <Box sx={{...}}>
+                          <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} sx={{...}}>
+                            <Insertion>
+                            <div className="MuiBox-roo...">
+                              <Typography sx={{color:"white", ...}}>
+                                <MuiTypography-root as="p" ref={null} className="MuiTypogra..." sx={{color:"white", ...}} ...>
+                                  <Insertion>
+>                                 <p
+>                                   className="MuiTypography-root MuiTypography-body1 css-55cb9p-MuiTypography-root"
+>                                   style={{}}
+>                                 >
+                                    <IoCall>
+                                    <Typography>
+                                      <MuiTypography-root as="p" ref={null} className="MuiTypogra..." sx={{...}} ...>
+                                        <Insertion>
+>                                       <p
+>                                         className="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+>                                         style={{}}
+>                                       >
+                        ...
+    ...
+
+[00:09:14.976] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. p <p>
+[00:09:19.018] Browser ERROR   unhandledRejection: InvalidStateError: Failed to execute 'setRemoteDescription' on 'RTCPeerConnection': Failed to set remote answer sdp: Called in wrong state: stable
+[00:09:40.544] Browser ERROR   unhandledRejection: InvalidStateError: Failed to execute 'setRemoteDescription' on 'RTCPeerConnection': Failed to set remote answer sdp: Called in wrong state: stable
