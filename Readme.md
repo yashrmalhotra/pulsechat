@@ -1,7 +1,7 @@
 # PulseChat ⚡
 
 **PulseChat** is a real-time messaging and calling platform built with an event-driven architecture.
-It supports instant messaging, delivery and read receipts, voice/video calls, and scalable message persistence using Kafka.
+It supports instant messaging, delivery and read receipts, voice/video calls, and scalable message persistence using Kafka and mongodb.
 
 The system is designed to demonstrate **modern backend architecture**, including streaming pipelines, caching, presence systems, and containerized development.
 
@@ -100,6 +100,7 @@ Kafka (Aiven)
 * Express
 * Socket.IO
 * Kafka (KafkaJS)
+* Mongodb
 
 ### Databases & Infrastructure
 
