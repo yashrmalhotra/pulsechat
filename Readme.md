@@ -1,5 +1,11 @@
 # PulseChat ⚡
 
+
+[🌐 Live Site](https://pulsechat-v1.vercel.app)
+### 👉 Docker Hub Repo
+📦 [`yashrmalhotra/pulsechat`](https://hub.docker.com/r/yashrmalhotra/pulsechat)
+
+
 **PulseChat** is a real-time messaging and calling platform built with an event-driven architecture.
 It supports instant messaging, delivery and read receipts, voice/video calls, and scalable message persistence using Kafka and mongodb.
 
